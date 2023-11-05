@@ -7,6 +7,12 @@ const catchError=(fn)=>{
     }
 }
 
+const getAllUserSignIn=catchError(async(req,res)=>{
+    
+    let user=await userModel.find()
+     res.status(201).json({message:"success",user})
+ });
+
  const signUp=catchError(async(req,res,next)=>{
     let isUser=await userModel.findOne({email:req.body.email})
     if(isUser)return res.status(409).json({message:"already exists"}) 
