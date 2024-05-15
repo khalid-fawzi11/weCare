@@ -2,11 +2,11 @@
 import express  from "express";
 import * as auth from "./auth.controller.js";
 
-const authRouter=express.Router()
+const auth=express.Router()
 
-authRouter.post('/signup',auth.signUp)
-authRouter.post('/signin',auth.signIn)
-authRouter.get('/signin/showuser',auth.getAllUserSignIn)
+auth.post('/signup',auth.signUp)
+auth.post('/signin',auth.signIn)
+auth.get('/signin/showuser',auth.getAllUserSignIn)
 
 
-export default authRouter
+export default auth
