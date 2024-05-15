@@ -7,6 +7,4 @@ const authRouter=express.Router()
 authRouter.post('/signup',auth.signUp)
 authRouter.post('/signin',auth.signIn)
 
-
-
 export default authRouter
